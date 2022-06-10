@@ -96,7 +96,7 @@ const Calculators = () => {
             max at that percent. Afterwards you can look at the Zones below to
             see what exercises or workouts are meant for that percentage. The
             zones below explain what that zone does to your body such as
-            improving endurance, best for fat lost, muscle gain, etc.
+            improving endurance, best for fat lost, muscle gain, etc!
           </h4>
           <input type='text' id='HRmaxAge' placeholder='Enter Age' required />
           <br />
