@@ -1,0 +1,19 @@
+.calculators {
+    width: 100%;
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    text-align: center;
+}
+
+.calculators .left {
+    text-align: center;
+    margin: auto;
+    padding: 1rem 4rem;
+    max-width: 600px;
+}
+
+.calculators .left p {
+    margin: 1.2 rem 0;
+}
