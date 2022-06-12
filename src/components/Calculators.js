@@ -114,13 +114,13 @@ const Calculators = () => {
             Get 50%
           </button>
           <h4>
-            60 Percent:<h3 id='60perc'></h3>
+            60 Percent: Target Heart Rate<h3 id='60perc'></h3>
           </h4>
           <button type='btn' id='sixty' onClick={get60perc}>
             Get 60%
           </button>
           <h4>
-            70 Percent:<h3 id='70perc'></h3>
+            70 Percent: Target Heart Rate<h3 id='70perc'></h3>
           </h4>
           <button type='btn' id='seventy' onClick={get70perc}>
             Get 70%

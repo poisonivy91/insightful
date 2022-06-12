@@ -9,7 +9,7 @@ function Login() {
           <input type="text" placeholder="Enter Your Email" required />
           <div className="underline"></div>
         </div>
-        <div classNAme="input-box">
+        <div className="input-box">
           <input type="password" placeholder="Enter Your Password" required />
           <div className="underline"></div>
         </div>
