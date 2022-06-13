@@ -1,6 +1,6 @@
 import React from 'react';
 import './CalculatorsStyles.css';
-//import Deficit from './Deficit'
+import  './Deficit'
 
 const Calculators = () => {
   function getHRmaxresults() {
