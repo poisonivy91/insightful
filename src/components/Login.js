@@ -7,13 +7,13 @@ import { auth, provider, red } from '../firebase';
 
 
 //Google login
-const googleP =  (e) =>{
+const googleP = (e) => {
 e.preventDefault();
 red(auth, provider)
 .then((result)=>{
   console.log(result);
 })
-.catch((error)=>{
+.catch((error) => {
   console.log(error.message);
 });
 
