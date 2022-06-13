@@ -96,7 +96,7 @@ const Calculators = () => {
             max at that percent. Afterwards you can look at the Zones below to
             see what exercises or workouts are meant for that percentage. The
             zones below explain what that zone does to your body such as
-            improving endurance, best for fat lost, muscle gain, etc.
+            improving endurance, best for fat lost, muscle gain, etc!
           </h4>
           <input type='text' id='HRmaxAge' placeholder='Enter Age' required />
           <br />
@@ -105,34 +105,34 @@ const Calculators = () => {
           </button>
           <br />
           <h4>
-            HRmax:<h3 id='hrmax'></h3>
+            HRmax:<span id='hrmax'></span>
           </h4>
           <h4>
-            50 Percent:<h3 id='50perc'></h3>
+            50 Percent:<span id='50perc'></span>
           </h4>
           <button type='btn' id='fifty' onClick={get50perc}>
             Get 50%
           </button>
           <h4>
-            60 Percent:<h3 id='60perc'></h3>
+            60 Percent:<span id='60perc'></span>
           </h4>
           <button type='btn' id='sixty' onClick={get60perc}>
             Get 60%
           </button>
           <h4>
-            70 Percent:<h3 id='70perc'></h3>
+            70 Percent:<span id='70perc'></span>
           </h4>
           <button type='btn' id='seventy' onClick={get70perc}>
             Get 70%
           </button>
           <h4>
-            80 Percent:<h3 id='80perc'></h3>
+            80 Percent:<span id='80perc'></span>
           </h4>
           <button type='btn' id='eighty' onClick={get80perc}>
             Get 80%
           </button>
           <h4>
-            90 Percent:<h3 id='90perc'></h3>
+            90 Percent:<span id='90perc'></span>
           </h4>
           <button type='btn' id='ninety' onClick={get90perc}>
             Get 90%
@@ -222,7 +222,7 @@ const Calculators = () => {
         <label>Inches: </label>
         <input type='number' id='inches' />
         <h3>
-          Height in inches: <h3 id='convert'></h3>
+          Height in inches: <span id='convert'></span>
         </h3>
         <button type='btn' id='convertHeight' onClick={convertHeight}>
           Convert Height to inches
@@ -258,7 +258,7 @@ const Calculators = () => {
           </h4>
           <br />
           <h1>
-            Mifflin Results are: <h2 id='mResultsF'></h2>
+            Mifflin Results are: <span id='mResultsF'></span>
           </h1>
           <br />
           <button type='btn' id='getResults' onClick={femaleMifflin}>
@@ -274,7 +274,7 @@ const Calculators = () => {
             of body temperature (thermogenesis), and digestion.
           </h5>
           <h1>
-            Harris Results are: <h2 id='hResultsF'></h2>
+            Harris Results are: <span id='hResultsF'></span>
           </h1>
           <button type='btn' id='getResults' onClick={femaleHarris}>
             Female Harris
