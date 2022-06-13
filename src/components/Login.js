@@ -1,24 +1,15 @@
 import React from 'react';
 import { useRef, useState, useEffect } from 'react';
 import './LoginStyles.css';
-import { auth, provider, red } from '../firebase';
 
 
 
 
-//Google login
-const googleP = (e) => {
-e.preventDefault();
-red(auth, provider)
-.then((result)=>{
-  console.log(result);
-})
-.catch((error) => {
-  console.log(error.message);
-});
 
 
-};
+
+
+
 
 
 
@@ -50,7 +41,7 @@ const Login = () => {
 
   return (
     <>
-  <button onClick={googleP}>Google Login</button>
+
 
 
       {/* {success ? (

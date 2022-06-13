@@ -19,9 +19,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider(app);
 const auth = getAuth(app);
-const red = signInWithRedirect(app);
 
 
 
 
-export { provider, auth, red};
+
+export { provider, auth};
