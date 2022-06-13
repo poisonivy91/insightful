@@ -2,6 +2,18 @@ import React from 'react';
 import { useRef, useState, useEffect } from 'react';
 import './LoginStyles.css';
 
+
+
+
+
+
+
+
+
+
+
+
+
 const Login = () => {
   const userRef = useRef();
   const errRef = useRef();
@@ -29,7 +41,10 @@ const Login = () => {
 
   return (
     <>
-      {success ? (
+
+
+
+      {/* {success ? (
         <section>
           <h1>You are logged in!</h1>
           <br />
@@ -73,11 +88,11 @@ const Login = () => {
             <br />
             <span className='line'>
               {/*put router link here*/}
-              <a href='/register'>Sign Up</a>
+              {/* <a href='/register'>Sign Up</a>
             </span>
           </p>
         </section>
-      )}
+      )} */} 
     </>
   );
 };

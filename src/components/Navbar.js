@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './NavBarStyles.css';
 
+
 const Navbar = () => {
+
+
+
+
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
@@ -19,6 +24,8 @@ const Navbar = () => {
   window.addEventListener('scroll', changeColor);
 
   return (
+
+
     <div className={color ? 'header header-bg' : 'header'}>
       <Link to='/'>
         <h1>Insightfully Fit</h1>
@@ -47,6 +54,8 @@ const Navbar = () => {
           <FaBars size={20} style={{ color: '#fff' }} />
         )}
       </div>
+
+    
     </div>
   );
 };
