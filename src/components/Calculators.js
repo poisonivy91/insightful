@@ -12,35 +12,35 @@ const Calculators = () => {
   function get50perc() {
     const age = document.getElementById('HRmaxAge').value;
     const HRmax = 220 - age;
-    const fifty = HRmax * 0.5;
+    const fifty = Number.parseInt(HRmax * 0.5);
     document.getElementById('50perc').innerHTML = fifty;
   }
 
   function get60perc() {
     const age = document.getElementById('HRmaxAge').value;
     const HRmax = 220 - age;
-    const sixty = HRmax * 0.6;
+    const sixty = Number.parseInt(HRmax * 0.6);
     document.getElementById('60perc').innerHTML = sixty;
   }
 
   function get70perc() {
     const age = document.getElementById('HRmaxAge').value;
     const HRmax = 220 - age;
-    const seventy = HRmax * 0.7;
+    const seventy = Number.parseInt(HRmax * 0.7);
     document.getElementById('70perc').innerHTML = seventy;
   }
 
   function get80perc() {
     const age = document.getElementById('HRmaxAge').value;
     const HRmax = 220 - age;
-    const eighty = HRmax * 0.8;
+    const eighty = Number.parseInt(HRmax * 0.8);
     document.getElementById('80perc').innerHTML = eighty;
   }
 
   function get90perc() {
     const age = document.getElementById('HRmaxAge').value;
     const HRmax = 220 - age;
-    const ninety = HRmax * 0.9;
+    const ninety = Number.parseInt(HRmax * 0.9);
     document.getElementById('90perc').innerHTML = ninety;
   }
   function femaleMifflin() {
@@ -101,12 +101,13 @@ const Calculators = () => {
           <input type='text' id='HRmaxAge' placeholder='Enter Age' required />
           <br />
           <button type='btn' id='getHRmaxResults' onClick={getHRmaxresults}>
-            Get 50%
+            Get HRmax
           </button>
           <br />
           <h4>
             HRmax:<span id='hrmax'></span>
           </h4>
+          <br/>
           <h4>
             50 Percent:<span id='50perc'></span>
           </h4>
@@ -139,74 +140,55 @@ const Calculators = () => {
           </button>
         </div>
         <div class='ExplainPercent'>
-          <h1>Zone 1: 50-60%</h1>
+          <h1>Target Heart Rate 60%</h1>
+          <h1>"Warm Up"</h1>
           <h4>
-            In zone 1 you will be at a Very Light workouts/ exercises to get
-            warmed up, cool down, or recovery. Getting warmed up and stretched
-            out is important before moving on to other zones. If not you are
-            more prone to injury.
+          Is the recommended HR for dynamic stretching and/or calisthenic warm up routines
+          before continuing to the more strenuous exercises within a workout,
+          sport focused movements or physically exerted competitions.
+          Minimum timeframe should be no less than 2 minutes of sustained HRmax at 60% target HR,
+          with a duration up to 15-20 minutes.
           </h4>
+          
+          <h1>Target Heart Rate 70%</h1>
+          <h1>“Aerobic Exercise” 
+            & 
+            “Part of the most efficient fat burning methodology (EPOC)”
+          </h1>
           <h4>
-            Example workouts:
-            <br /> walking at casual pace, light jog, elliptical machine,
-            cycling at casual pace, and rowing at a steady pace
+          Is the recommended HR for Aerobic exercise and more interestingly for the active rest interval in HIIT (High Intensity Interval Training)
+          or SIT (Sprint Interval Training) training for the purpose of achieving Excess Post Oxygen Consumption (EPOC).
+          EPOC is the amount of oxygen required to restore your body to its normal, resting level of metabolic function
+          (called homeostasis).
+          It also explains how your body can continue to burn calories long after you’ve finished your workout.
+          Running, Cycling, Rowing or Stair steppers are examples of Aerobic exercises
+          albeit they could easily be turned into the next Target Heart Rate.
+          The key is to sustain a target heart rate of 70% to be within the Aerobic phase.
+
           </h4>
-          <h1>Zone 2: 60-70%</h1>
+        
+          
+   
+          <h1>Target Heart Rate 85%+</h1>
+          <h1>“Anaerobic Exercise” & “Part of the most efficient fat burning methodology (EPOC)”</h1>
           <h4>
-            In zone 2 you will be doing Light exercises/ workouts that you
-            should be able to do for a long period of time. In this zone you
-            will be improving your general endurance which means it will get
-            better at oxidizing burning fat and muscle fitness along with
-            capillary density will increase.
+          Is the recommended HR for Anaerobic exercise and in regards to the previously mentioned topic of HIIT,
+          SIT and EPOC is the high intensity component to HIIT and SIT. 
+          HIIT is the most effective way to stimulate the EPOC effect.
+          The body is most efficient at producing Adenosine Triphosphate (ATP) through aerobic metabolism.
+          However, at higher intensities when energy is needed immediately, the anaerobic pathways can provide the necessary ATP much more quickly.
+          But the body can only sustain the anaerobic phase for about 45sec to 1 minute. Therefore, we can only sustain high-intensity activity for a brief period. 
+          We simply run out of energy. HIIT works because ATP is produced by the anaerobic pathways during high-intensity exercise; 
+          once that ATP is exhausted, it is necessary to allow ATP to be replenished via the rest interval or active-rest period during HIIT training.
+          This active rest period allows aerobic metabolism to produce and replace ATP in the involved muscles. 
+          All of this plays a key part into EPOC because of the oxygen deficit between the phases. 
+          The volumes of oxygen consumed during the active rest phase of exercise along with the amount 
+          that would be consumed if energy demands were met through only the aerobic energy pathway are offset. 
+
           </h4>
-          <h4>
-            Example workouts:
-            <br /> walking at casual pace, light jog, elliptical machine,
-            cycling at casual pace, and rowing at a steady pace
-          </h4>
-          <h1>Zone 3: 70-80%</h1>
-          <h4>
-            In zone 3 you will be at Moderate Level workouts that will improve
-            the efficiency of clood circulation in skeletal mucles along with
-            the heart. This zone will improve efficiently, make moderate efforts
-            easier, and start producing lactic acid build up in your
-            bloodstream.
-          </h4>
-          <h4>
-            Example workouts:
-            <br /> walking two miles in 30 minutes, biking five miles in 30
-            minutes, swimming laps for 20 minutes, playing volleyball for 45
-            minutes
-          </h4>
-          <h1>Zone 4: 80-90%</h1>
-          <h4>
-            In zone 3 you will be at Hard level workouts/ exercises that will be
-            aerobic and leave you breathing hard. This zone will improve your
-            speed endurance and make your body better at using carbohydrates for
-            energy. Your body will also get better at withstanding higher and
-            higher levels of lactic acid build up in your bloodstream.
-          </h4>
-          <h4>
-            Example workouts:
-            <br /> Jump lunge. Work 20sec Rest 10sec. Explode off the ground and
-            change legs in the air on each rep, high knees. Work 20sec Rest
-            10sec. Run on the spot, bringing your knees as high as possible,
-            jump squat, do about 8 times to complete hard intenstiy
-          </h4>
-          <h1>Zone 5: 90-100%</h1>
-          <h4>
-            In zone 5 you will be at the Extreme level workouts/ exercises will
-            be for a short duration and will be using maximum efforts. The
-            reason this zone is only for a few minutes is because the lactic
-            acid build up will happen faster and will not be able to continue at
-            this intensity. This intenisty is for expercienced training and is
-            not recommended for people just starting their fitness journey.
-          </h4>
-          <h4>
-            Example workouts:
-            <br /> do 5 rounds of 5x Back Squat or Difficult but Doable, 2x
-            Broad Jumps, 60 second rest and while resting do the Pec Ball
-          </h4>
+          
+          
+          
         </div>
       </div>
       <br />
