@@ -15,7 +15,7 @@ const Video = () => {
 //Google login
 const googleP =  (e) =>{
   e.preventDefault();
-  signInWithPopup(auth, provider)
+  signInWithPopup(auth, provider, loading, error)
   .then((result)=>{
     console.log(result);
     console.log("I am logged!");
@@ -46,14 +46,16 @@ const logOut = () =>{
             src={user?.photoURL}
             />
 
+            <h1>Welcome</h1>
 
-            <h1>Let's Get Active</h1>
+              <h1>{user?.displayName}</h1>
 
-          
+            <p>Train With Insight</p>
 
-            <h2>Welcome{user?.displayName}</h2>
-           
-            <p>Helping people get fit and live a healthly lifestyle</p>
+            <p> & </p>
+            
+            <p>Empower Your Fitness Journey </p>
+
             <button onClick={googleP}>Google Login</button>
             <button onClick={logOut}>Sign Out</button>
             
