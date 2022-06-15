@@ -6,6 +6,8 @@ import About from './routes/About';
 import Calculators from './routes/Calculators';
 import Login from './components/Login';
 
+
+
 function App() {
   return (
     <>
@@ -15,8 +17,11 @@ function App() {
         <Route path='/calculators' element={<Calculators />} />
         <Route path='/login' element={<Login />} />
       </Routes>
+      
     </>
+    
   );
 }
+
 
 export default App;
