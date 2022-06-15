@@ -7,12 +7,12 @@ import { GoogleAuthProvider, getAuth} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBQmIac10suTh-3iPnFUZ723GPsjIpLBns",
-  authDomain: "insightfullyfit.firebaseapp.com",
-  projectId: "insightfullyfit",
-  storageBucket: "insightfullyfit.appspot.com",
-  messagingSenderId: "1037260515441",
-  appId: "1:1037260515441:web:888bbbc4d8a2588d9513d0"
+  apiKey: "AIzaSyAfazHcd2mZSfJdUWvKAT9c3KSjNtaH7PE",
+  authDomain: "insightful-a10e3.firebaseapp.com",
+  projectId: "insightful-a10e3",
+  storageBucket: "insightful-a10e3.appspot.com",
+  messagingSenderId: "896118324426",
+  appId: "1:896118324426:web:4e51b3eb7a64252b204833"
 };
 
 // Initialize Firebase
