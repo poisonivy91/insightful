@@ -1,6 +1,8 @@
 import React from 'react';
+import BodyFatForm from './BodyFatForm';
 import './CalculatorsStyles.css';
-import  './Deficit'
+import Deficit from './Deficit';
+import Excess from './Excess';
 
 const Calculators = () => {
   function getHRmaxresults() {
@@ -84,6 +86,11 @@ const Calculators = () => {
   return (
     <div className='calculators'>
       <div>
+
+
+        <Deficit/>
+        <Excess/>
+        <BodyFatForm/>
         <div id='HRmaxInputs'>
           <h1>HRmax = 220 - Age</h1>
           <h4>
@@ -100,7 +107,7 @@ const Calculators = () => {
           </h4>
           <input type='text' id='HRmaxAge' placeholder='Enter Age' required />
           <br />
-          <button type='btn' id='getHRmaxResults' onClick={getHRmaxresults}>
+          <button  id='getHRmaxResults' onClick={getHRmaxresults}>
             Get HRmax
           </button>
           <br />
@@ -111,31 +118,31 @@ const Calculators = () => {
           <h4>
             50 Percent:<span id='50perc'></span>
           </h4>
-          <button type='btn' id='fifty' onClick={get50perc}>
+          <button  id='fifty' onClick={get50perc}>
             Get 50%
           </button>
           <h4>
             60 Percent:<span id='60perc'></span>
           </h4>
-          <button type='btn' id='sixty' onClick={get60perc}>
+          <button  id='sixty' onClick={get60perc}>
             Get 60%
           </button>
           <h4>
             70 Percent:<span id='70perc'></span>
           </h4>
-          <button type='btn' id='seventy' onClick={get70perc}>
+          <button  id='seventy' onClick={get70perc}>
             Get 70%
           </button>
           <h4>
             80 Percent:<span id='80perc'></span>
           </h4>
-          <button type='btn' id='eighty' onClick={get80perc}>
+          <button  id='eighty' onClick={get80perc}>
             Get 80%
           </button>
           <h4>
             90 Percent:<span id='90perc'></span>
           </h4>
-          <button type='btn' id='ninety' onClick={get90perc}>
+          <button  id='ninety' onClick={get90perc}>
             Get 90%
           </button>
         </div>
@@ -211,7 +218,7 @@ const Calculators = () => {
         </button>
         <div class='female'>
           <h1 id='FemaleFormula'>BMR Formulas</h1>
-          <h2>
+          <h4>
             Mifflin Formulas:
             <br /> Male: 10 * weight + 6.25 * height - 5.677 * age - 161 <br />{' '}
             Female: 10 * weight + 6.25 * height - 5 * age + 5 <br /> Harris
@@ -219,7 +226,7 @@ const Calculators = () => {
             <br /> Male: 9.247 * weight + 3.098 * height - 4.33 * age + 447.593
             <br /> Female: 13.397 * weight + 4.799 * height - 5.677 * age +
             88.362
-          </h2>
+          </h4>
           <input type='text' id='BMRage' placeholder='Enter Age' />
           <br />
           <input type='text' id='weight' placeholder='Enter Weight in lbs.' />
@@ -250,11 +257,9 @@ const Calculators = () => {
           <button type='btn' id='getResults' onClick={maleMifflin}>
             Male Mifflin
           </button>
-          <h5>
-            The Harris-Benedict is the amount of energy required to maintain the
-            body's normal metabolic activity, such as respiration, maintenance
-            of body temperature (thermogenesis), and digestion.
-          </h5>
+          <h4>
+            The Harris-Benedict BMR Calculator
+          </h4>
           <h1>
             Harris Results are: <span id='hResultsF'></span>
           </h1>

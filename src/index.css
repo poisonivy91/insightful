@@ -32,11 +32,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.btn {
+button {
   padding: 12 px 32px;
   font-size: 1.2rem;
   background: transparent;
-  color: #fff;
+  color: rgb(47, 47, 47);
   border: 1px solid #fff;
   cursor: pointer;
 }

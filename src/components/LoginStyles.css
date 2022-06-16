@@ -35,7 +35,7 @@ form {
 
 a, a:visited {
     color: #fff;
-    color: blue;
+    color: rgb(29, 240, 255);
 }
 
 input[type="text"],
@@ -52,7 +52,7 @@ label,
 button {
   margin-top: 1rem;
   color: #fff;
-  color: blue;
+  color: rgb(29, 240, 255);
 }
 
 button {

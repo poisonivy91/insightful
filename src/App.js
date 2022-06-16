@@ -8,6 +8,7 @@ import Login from './components/Login';
 
 
 
+
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/calculators' element={<Calculators />} />
         <Route path='/login' element={<Login />} />
+        
       </Routes>
       
     </>
