@@ -1,13 +1,14 @@
-import { async } from "@firebase/util";
+import {} from 'firebase/firstore';
 import { useState, useEffect } from "react";
-import {db} from './firebase';
+import {db} from '../firebase';
 import {collection, getDocs, addDoc, updateDoc, doc, deleteDoc} from 'firebase/firestore';
 
 function BodyCompCRUD(){
     const [newName, setNewName] = useState("");
     const [newAge, setNewAge] = useState(0);
     const [users, setUsers] = useState([]);
-    const usersCollectionRef = collection(db,users)
+    const usersCollectionRef = collection(db,users);
+    
 
     const createBodyComp = async () => {
         await addDoc(usersCollectionRef, {name: newName, age: Number(newAge)});
@@ -32,6 +33,8 @@ function BodyCompCRUD(){
        }
        getUsers()
     }, [])
+
+    
     return <div className = "BodyCompCRUD">
         <input placeholder="Name..." onChange={(event) => {setNewName(event.target.value)}}/>
         <input type= 'number' placeholder="Age..." onChange={(event) => {setNewAge(event.target.value)}}/>
