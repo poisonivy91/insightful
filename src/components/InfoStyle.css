@@ -1,0 +1,19 @@
+.container{
+    text-align: center;
+    padding-top: 150px ;
+}
+
+p{
+    color: white;
+}
+
+h3{
+    color: red;
+}
+
+img#Skin-Fold{
+    width: 100%;
+    height: 25vh;
+}
+
+

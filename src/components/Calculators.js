@@ -207,9 +207,9 @@ const Calculators = () => {
         </h3>
         <h5>If you do not know your height in inches enter below to convert</h5>
         <label>Feet: </label>
-        <input type='number' id='feet' />
+        <input type='number' id='feet' placeholder=' Feet' />
         <label>Inches: </label>
-        <input type='number' id='inches' />
+        <input type='number' id='inches' placeholder=' Inches' />
         <h3>
           Height in inches: <span id='convert'></span>
         </h3>
