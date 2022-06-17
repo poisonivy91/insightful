@@ -53,7 +53,7 @@ class Deficit extends React.Component {
            
           </select>
           <br/>
-          Base Metabolic Rate: <input onChange={this.updateA} value={this.state.a} />
+          <h4>Base Metabolic Rate:</h4> <input onChange={this.updateA} value={this.state.a} />
           <br/>
           Deficit calories: Recommend no less than a subtraction of 250 but not more than 500<input onChange={this.updateB} value={this.state.b} />
         
