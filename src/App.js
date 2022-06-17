@@ -5,7 +5,7 @@ import Home from './routes/Home';
 import About from './routes/About';
 import Calculators from './routes/Calculators';
 import Login from './components/Login';
-import Info from './routes/Information';
+import Info from './components/Information';
 
 
 

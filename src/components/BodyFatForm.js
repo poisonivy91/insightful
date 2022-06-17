@@ -89,7 +89,7 @@ class BodyFatForm extends Component {
           />
         </div>
         <div>
-          <button>Calculate Body Fat Percentage</button>
+          <button>Body Fat Percentage Result</button>
         </div>
 
         <h4> Body Density Male: {this.male()} </h4>
@@ -98,8 +98,6 @@ class BodyFatForm extends Component {
         <h4> Body Fat Percentage Female: {this.bodyFatPercentFemale()} </h4>
 
         <br />
-
-        <h4>Value: {this.state.value} </h4>
       </form>
     );
   }

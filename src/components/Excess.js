@@ -56,7 +56,8 @@ class Excess extends React.Component {
           <input onChange={this.updateA} value={this.state.a} />
           <br />
           Excess calories: Recommend no less than a addition of 250 but not more
-          than 500
+          than 500: 
+          <br />
           <input onChange={this.updateB} value={this.state.b} />
           <br />
           BMR before Deficit: BMR x Activity level = {this.result1()}
