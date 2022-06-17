@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Video from '../components/Video'
 
-const home = () => {
+const Home = () => {
   return (
     <div>
         <Navbar />
@@ -13,4 +13,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home
