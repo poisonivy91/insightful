@@ -1,13 +1,13 @@
-.container{
+.info{
     text-align: center;
-    padding-top: 150px ;
+    padding-top: 75px ;
 }
 
-p{
+p#info{
     color: white;
 }
 
-h3{
+h3#info{
     color: red;
 }
 
