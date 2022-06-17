@@ -60,11 +60,11 @@ const logOut = () =>{
             <button onClick={logOut}>Sign Out</button>
             
            
-            {<div>
+            {/* {<div>
                 <Link to='/register' className='btn'>Register</Link>
 
                 <Link to='/login' className='btn btn-light'>Launch</Link>
-            </div> }
+            </div> } */}
         </div>
        
     </div>

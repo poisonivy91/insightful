@@ -41,10 +41,10 @@ const Navbar = () => {
           <Link to='/calculators'>Calculators</Link>
         </li>
         <li>
-          <Link to='/login'>Login</Link>
+          <Link to='/login'>Links</Link>
         </li>
         <li>
-          <Link to='/register'>Register</Link>
+          <Link to='/register'></Link>
         </li>
       </ul>
       <div className='hamburger' onClick={handleClick}>
