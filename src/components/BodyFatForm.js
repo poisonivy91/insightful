@@ -8,6 +8,17 @@ class BodyFatForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
+    handleSubmit(event){
+        const {age, skinfold} = this.state
+        event.preventDefault()
+        alert(
+            "Body Density: "+ Number.parseFloat(1.10938 - (0.0008267 * this.state.skinfold ) + (0.0000016 * (this.state.skinfold*this.state.skinfold)) - (0.0002574 * this.state.age),100)
+         +"\n Body Fat: % "+Number.parseFloat((495 / this.result()) - 450)
+         +"\n"+this.state.value
+        )
+    }
+
   handleSubmit(event) {
     const { age, skinfold, value } = this.state;
     event.preventDefault();
@@ -26,6 +37,7 @@ class BodyFatForm extends Component {
         this.state.value
     );
   }
+
 
   handleChange(event) {
     this.setState({
@@ -55,6 +67,9 @@ class BodyFatForm extends Component {
     );
   bodyFatPercentFemale = () => Number.parseFloat(495 / this.female() - 450);
 
+
+   
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
@@ -72,6 +87,7 @@ class BodyFatForm extends Component {
         </div>
         <div>
           <label htmlFor="age">Age</label>
+
           <input
             name="age"
             placeholder="Age"
@@ -80,6 +96,8 @@ class BodyFatForm extends Component {
           />
         </div>
         <div>
+          <h2>Body Fat Percentage Result(s)</h2>
+
           <label htmlFor="skinfold">Skinfold</label>
           <input
             name="skinfold"
@@ -87,6 +105,7 @@ class BodyFatForm extends Component {
             value={this.state.skinfold}
             onChange={this.handleChange}
           />
+
         </div>
         <div>
           <button>Body Fat Percentage Result</button>
@@ -97,10 +116,8 @@ class BodyFatForm extends Component {
         <h4>Body Density Female: {this.female()}</h4>
         <h4> Body Fat Percentage Female: {this.bodyFatPercentFemale()} </h4>
 
-        <br />
       </form>
     );
   }
 }
-
 export default BodyFatForm;
