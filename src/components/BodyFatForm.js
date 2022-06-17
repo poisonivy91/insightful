@@ -70,17 +70,14 @@ class BodyFatForm extends Component{
         </div>
         
             
-        Body Density Male: {this.male()}
-        <br/>
-        Body Fat Percentage Male: {this.bodyFatPercentMale()}
-        <br/>
-        Body Density Female: {this.female()}
-        <br/>
-        Body Fat Percentage Female: {this.bodyFatPercentFemale()}
-        <br/>
-       
+       <h4> Body Density Male: {this.male()} </h4>
+        <h4>Body Fat Percentage Male: {this.bodyFatPercentMale()} </h4>
+        <h4>Body Density Female: {this.female()}</h4>
+        <h4> Body Fat Percentage Female: {this.bodyFatPercentFemale()} </h4>
         
-        Value: {this.state.value}
+       <br/>
+        
+       <h4>Value: {this.state.value} </h4>
             </form>
         )
     }
