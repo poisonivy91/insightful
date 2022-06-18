@@ -4,16 +4,6 @@ import './LoginStyles.css';
 
 
 
-
-
-
-
-
-
-
-
-
-
 const Login = () => {
   const userRef = useRef();
   const errRef = useRef();
