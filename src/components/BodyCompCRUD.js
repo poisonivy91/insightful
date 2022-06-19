@@ -1,6 +1,6 @@
 //import {} from "firebase/firstore";
 import { useState, useEffect } from "react";
-import { db, onSnapshot } from "../firebase";
+import { db} from "../firebase";
 import {
   collection,
   getDocs,
@@ -23,13 +23,13 @@ function BodyCompCRUD() {
     await addDoc(usersCollectionRef, { name: newName, age: Number(newAge), bmr: Number(newBMR), hrmax: Number(newHRmax) });
   };
 
-  onSnapshot(userDoc, snapshot => {console.log(snapshot)});
+  
 
-  onSnapshot(userCol)
+  
 
   const updateUser = async (id, age) => {
     const userDoc = doc(db, "users", id);
-    const newFields = { age: age + 1 , bmr: bmr + 1};
+    const newFields = { age: age + 1};
     await updateDoc(userDoc, newFields);
   };
 
