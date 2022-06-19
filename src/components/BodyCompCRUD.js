@@ -9,6 +9,7 @@ import {
   doc,
   deleteDoc,
 } from "firebase/firestore";
+import "./BodyCompStyles.css";
 
 
 function BodyCompCRUD() {
@@ -55,6 +56,7 @@ function BodyCompCRUD() {
           setNewName(event.target.value);
         }}
       />
+      <br/>
       <input
         type="number"
         placeholder="Age..."
@@ -62,6 +64,7 @@ function BodyCompCRUD() {
           setNewAge(event.target.value);
         }}
       />
+      <br/>
       <input
         type="number"
         placeholder="BMR..."
@@ -69,6 +72,7 @@ function BodyCompCRUD() {
           setNewBMR(event.target.value);
         }}
       />
+      <br/>
       <input
         type="number"
         placeholder="HRmax..."
@@ -76,10 +80,11 @@ function BodyCompCRUD() {
           setNewHRmax(event.target.value);
         }}
       />
+      <br/>
       <button onClick={createBodyComp}>Body Composition Results</button>
       {users.map((user) => {
         return (
-          <div>
+          <div class="bodycompresults">
             <h3>Name: {user.name}</h3>
             <h3>Age: {user.age}</h3>
             <h3>BMR: {user.bmr}</h3>
@@ -93,21 +98,14 @@ function BodyCompCRUD() {
               Increase Age
             </button>
 
-            <button
-              onClick={() => {
-                updateUser(user.id,user.bmr);
-              }}
-            >
-              {" "}
-              Increase BMR
-            </button>
+            
 
 
             <button
               onClick={() => {
                 deleteUser(user.id);
               }}
-            ></button>
+            >Delete</button>
           </div>
         );
       })}
