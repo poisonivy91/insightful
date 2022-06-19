@@ -50,7 +50,7 @@ const Calculators = () => {
     const weight = document.getElementById('weight').value / 2.205;
     const height = document.getElementById('height').value * 2.54;
     const bmr = 10 * weight + 6.25 * height - 5 * age + 5;
-    document.getElementById('mResultsF').innerHTML = bmr;
+    document.getElementById('mResultsF').innerHTML = parseInt(bmr);
   }
 
   function femaleHarris() {
@@ -58,15 +58,18 @@ const Calculators = () => {
     const weight = document.getElementById('weight').value / 2.205;
     const height = document.getElementById('height').value * 2.54;
     const bmr = 13.397 * weight + 4.799 * height - 5.677 * age + 88.362;
-    document.getElementById('hResultsF').innerHTML = bmr;
+    document.getElementById('hResultsF').innerHTML = parseInt(bmr);
   }
+
+ 
+
 
   function maleMifflin() {
     const age = document.getElementById('BMRage').value;
     const weight = document.getElementById('weight').value / 2.205;
     const height = document.getElementById('height').value * 2.54;
     const bmr = 10 * weight + 6.25 * height - 5.677 * age - 161;
-    document.getElementById('mResultsF').innerHTML = bmr;
+    document.getElementById('mResultsF').innerHTML = parseInt(bmr);
   }
 
   function maleHarris() {
@@ -74,8 +77,11 @@ const Calculators = () => {
     const weight = document.getElementById('weight').value / 2.205;
     const height = document.getElementById('height').value * 2.54;
     const bmr = 9.247 * weight + 3.098 * height - 4.33 * age + 447.593;
-    document.getElementById('hResultsF').innerHTML = bmr;
+    document.getElementById('hResultsF').innerHTML = parseInt(bmr);
   }
+
+ 
+
 
   function convertHeight() {
     const feet = document.getElementById('feet').value;

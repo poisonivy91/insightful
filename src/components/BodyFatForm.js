@@ -76,14 +76,7 @@ class BodyFatForm extends Component {
         <h1>Body Fat</h1>
         <br />
         <div>
-          <label>
-            Select Sex:
-            <br />
-            <select value={this.state.value} onChange={this.handleChange}>
-              <option value={this.male()}>Male</option>
-              <option value={this.female()}>Female</option>
-            </select>
-          </label>
+         
         </div>
         <div>
           <label htmlFor="age">Age</label>
@@ -96,8 +89,7 @@ class BodyFatForm extends Component {
           />
         </div>
         <div>
-          <h2>Body Fat Percentage Result(s)</h2>
-
+          
           <label htmlFor="skinfold">Skinfold</label>
           <input
             name="skinfold"
@@ -105,10 +97,11 @@ class BodyFatForm extends Component {
             value={this.state.skinfold}
             onChange={this.handleChange}
           />
+        <h2>Body Fat Percentage Result(s)</h2>
 
         </div>
         <div>
-          <button>Body Fat Percentage Result</button>
+          
         </div>
 
         <h4> Body Density Male: {this.male()} </h4>

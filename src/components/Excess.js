@@ -72,7 +72,7 @@ class Excess extends React.Component {
           <br />
           Fat: {this.fat()}grams at 25% of TDCI
           <br />
-          <input type="submit" value="Submit" />
+          
         </label>
       </form>
     );
