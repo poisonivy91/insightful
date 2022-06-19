@@ -18,4 +18,13 @@
   margin: 1.2 rem 0;
 }
 
+label,
+button {
+  margin-top: 1rem;
+  color: white;
+  color: cyan
+}
 
+button{
+  padding: 0.5rem;
+}

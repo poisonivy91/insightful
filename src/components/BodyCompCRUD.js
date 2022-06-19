@@ -1,6 +1,6 @@
-import {} from "firebase/firstore";
+//import {} from "firebase/firstore";
 import { useState, useEffect } from "react";
-import { db } from "../firebase";
+import { db, onSnapshot } from "../firebase";
 import {
   collection,
   getDocs,
@@ -10,21 +10,29 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 
+
 function BodyCompCRUD() {
   const [newName, setNewName] = useState("");
   const [newAge, setNewAge] = useState(0);
+  const [newBMR, setNewBMR] = useState(0);
+  const [newHRmax, setNewHRmax] = useState(0);
   const [users, setUsers] = useState([]);
-  const usersCollectionRef = collection(db, users);
+  const usersCollectionRef = collection(db, "users");
 
   const createBodyComp = async () => {
-    await addDoc(usersCollectionRef, { name: newName, age: Number(newAge) });
+    await addDoc(usersCollectionRef, { name: newName, age: Number(newAge), bmr: Number(newBMR), hrmax: Number(newHRmax) });
   };
+
+  onSnapshot(userDoc, snapshot => {console.log(snapshot)});
+
+  onSnapshot(userCol)
 
   const updateUser = async (id, age) => {
     const userDoc = doc(db, "users", id);
-    const newFields = { age: age + 1 };
+    const newFields = { age: age + 1 , bmr: bmr + 1};
     await updateDoc(userDoc, newFields);
   };
+
 
   const deleteUser = async (id) => {
     const userDoc = doc(db, "users", id);
@@ -54,12 +62,28 @@ function BodyCompCRUD() {
           setNewAge(event.target.value);
         }}
       />
+      <input
+        type="number"
+        placeholder="BMR..."
+        onChange={(event) => {
+          setNewBMR(event.target.value);
+        }}
+      />
+      <input
+        type="number"
+        placeholder="HRmax..."
+        onChange={(event) => {
+          setNewHRmax(event.target.value);
+        }}
+      />
       <button onClick={createBodyComp}>Body Composition Results</button>
       {users.map((user) => {
         return (
           <div>
             <h3>Name: {user.name}</h3>
-            <h3>Age: {user.age}</h3>{" "}
+            <h3>Age: {user.age}</h3>
+            <h3>BMR: {user.bmr}</h3>
+            <h3>HRmax: {user.hrmax}</h3>{" "}
             <button
               onClick={() => {
                 updateUser(user.id, user.age);
@@ -68,6 +92,17 @@ function BodyCompCRUD() {
               {" "}
               Increase Age
             </button>
+
+            <button
+              onClick={() => {
+                updateUser(user.id,user.bmr);
+              }}
+            >
+              {" "}
+              Increase BMR
+            </button>
+
+
             <button
               onClick={() => {
                 deleteUser(user.id);

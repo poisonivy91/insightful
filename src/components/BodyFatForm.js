@@ -20,7 +20,7 @@ class BodyFatForm extends Component {
     }
 
   handleSubmit(event) {
-    const { age, skinfold, value } = this.state;
+    const { age, skinfold} = this.state;
     event.preventDefault();
     alert(
       "Body Density: " +
