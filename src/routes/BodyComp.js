@@ -3,10 +3,12 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import BodyCompCRUD from "../components/BodyCompCRUD";
 //import Deficit from '../components/Deficit'
+import Background from '../components/Background';
 
-const Calculators = () => {
+const BodyComp = () => {
   return (
     <div>
+      <Background />
       <Navbar />
       <BodyCompCRUD />
       <Footer />
@@ -14,4 +16,4 @@ const Calculators = () => {
   );
 };
 
-export default Calculators;
+export default BodyComp;

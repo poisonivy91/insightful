@@ -49,7 +49,11 @@ function BodyCompCRUD() {
   }, []);
 
   return (
+
+
     <div className="BodyCompCRUD">
+        <h1>Body Composition</h1>
+        <br/>
       <input
         placeholder="Name..."
         onChange={(event) => {
