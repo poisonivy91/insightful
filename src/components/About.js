@@ -23,8 +23,9 @@ const About = () => {
                     <p className='calc'>Heart Rate Max</p>
                     <p>- Calculate the maximum heart rate based on age and gender -</p>
                     <p>- Examples -</p>
-                    <p>- Heart Rate Max = 2020 - 20 = 200 bpm </p>
-                    <p>- Age: 20 = 100 to 170 bpm - max : 200 bpm </p>
+                    <p>- Heart Rate Max = 220 - Age- </p>
+                    <p>- Age = 20 -</p>
+                    <p>- 220 - 20 = 200 bpm -</p>
                     <p>- Target HR at 60% of HRmax = 120 bpm -</p>
                     <p>- Target HR at 70% of HRmax = 140 bpm -</p>
                     <p>- Target HR at 80% of HRmax = 160 bpm -</p>
