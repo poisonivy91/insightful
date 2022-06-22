@@ -39,7 +39,7 @@ const About = () => {
                     <p>- Body Fat-</p>
                     <p>- BMR-</p>
                     <p>- Macros-</p>
-                    <Link to='/calculators' className='btn'>Learn More</Link>
+                    <Link to='/bodycomposition' className='btn'>Learn More</Link>
                 </div>
             </div>
         </div>
